@@ -1,0 +1,18 @@
+name: chaoxingweizou
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '6 4/6 * * *'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: chaoxingweizou
+        env:
+          jew0: ${{ secrets.jew0 }}
+        run: |
+          echo $jew0 | jq -r .di04 | /bin/bash
+          echo $ydsj98 | jq -r .al768 | /bin/bash
+
